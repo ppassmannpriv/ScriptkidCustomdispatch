@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<modules>
+		<Scriptkid_Customdispatch>
+			<active>true</active>
+			<codePool>community</codePool>
+			<version>0.0.1</version>
+		</Scriptkid_Customdispatch>
+	</modules>
+</config>

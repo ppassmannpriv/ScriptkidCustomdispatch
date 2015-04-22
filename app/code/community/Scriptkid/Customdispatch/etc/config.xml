@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Scriptkid_Customdispatch>
+			<version>0.0.1</version>
+		</Scriptkid_Customdispatch>
+	</modules>
+	<global>
+		<models>
+			<customdispatch>
+				<class>Scriptkid_Customdispatch_Model</class>
+			</customdispatch>
+		</models>
+	</global>
+	<frontend>
+		<events>
+			
+			<controller_action_predispatch>
+				<observers>
+					<controller_action_before>
+						<class>customdispatch/observer</class>
+						<method>hookToControllerActionPreDispatch</method>
+					</controller_action_before>
+				</observers>
+			</controller_action_predispatch>
+
+			<controller_action_postdispatch>
+				<observers>
+					<controller_action_after>
+						<class>customdispatch/observer</class>
+						<method>hookToControllerActionPostDispatch</method>
+					</controller_action_after>
+				</observers>
+			</controller_action_postdispatch>
+			
+			<!--
+			<cms_nopage_found>
+				<observers>
+					<noroute>
+						<class>customdispatch/observer</class>
+						<method>noroute</method>
+					</noroute>
+				</observers>
+			</cms_nopage_found>
+			-->
+
+			<!--
+			<controller_action_layout_generate_blocks_before>
+				<observers>
+					<layout_debug>
+						<class>customdispatch/observer</class>
+						<method>layoutDebug</method>
+					</layout_debug>
+				</observers>
+			</controller_action_layout_generate_blocks_before>-->
+			
+			<!-- <add_to_cart_before>
+				<observers>
+					<add_to_cart_before>
+						<class>customdispatch/observer</class>
+						<method>hookToAddToCartBefore</method>
+					</add_to_cart_before>
+				</observers>
+			</add_to_cart_before>
+			
+			<add_to_cart_after>
+				<observers>
+					<add_to_cart_after>
+						<class>customdispatch/observer</class>
+						<method>hookToAddToCartAfter</method>
+					</add_to_cart_after>
+				</observers>
+			</add_to_cart_after> -->
+			
+		</events>
+	</frontend>
+</config>
